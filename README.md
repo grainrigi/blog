@@ -1,0 +1,1 @@
+You can view the content at https://blog.grainrigi.net/
