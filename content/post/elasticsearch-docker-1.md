@@ -2,8 +2,10 @@
 title: "Elasticsearch8をDockerで使ってみる (1) シングルノード構成" # Title of the blog post.
 date: 2022-11-14T23:15:28+09:00 # Date of post creation.
 toc: true # Controls if a table of contents should be generated for first-level links automatically.
+featureImage: '/images/elasticsearch-docker.png'
+thumbnail: '/images/elasticsearch-docker.png'
 categories:
-  - 備忘録
+  - 技術記事
 tags:
   - Elasticsearch
   - Docker 
@@ -105,6 +107,16 @@ New value: GsSBO_UdsAk3d=dyvm=H
 
 `New value:`の右にランダム生成されたパスワードが表示されるので、記録しておく。
 
+{{% notice info "Info" %}}
+(11/17追記)
+今回はコマンドによりパスワードを設定したが、コンテナの環境変数`ELASTIC_PASSWORD`に設定することでもパスワードを変更可能である。
+
+```yml:docker-compose.yml
+    environment:
+      - "ELASTIC_PASSWORD=p@ssw0rd"
+```
+{{% /notice %}}
+
 ### CA証明書のコピー
 
 ElasticsearchはTLSを用いるために自己署名証明書を生成して用いている。
@@ -146,3 +158,4 @@ Enter host password for user 'elastic':
 
 次回はデータの永続化に関する設定と、それに伴って必要となる自前でのセキュリティ基盤の構築を行う。
 
+[Elasticsearch8をDockerで使ってみる (2) | 永続化とX-Packセキュリティ](/post/elasticsearch-docker-2/)
