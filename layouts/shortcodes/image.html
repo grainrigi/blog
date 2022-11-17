@@ -6,7 +6,7 @@
 
 <figure>
   {{range $src := $srcs}}
-    {{- $width := or ($root.Get "w") "220" }}
+    {{- $width := or ($root.Get "h") "220" }}
     {{- $size := printf "x%s" $width }}
     {{- $res := $root.Page.Resources.GetMatch $src }}
     {{- $image := $res.Resize $size }}
