@@ -46,7 +46,7 @@ fontsDir = "fonts/" # without a leading forward slash
 
 # Social media sharing image: Will be used on Twitter, Facebook, LinkedIn, etc.
 # when a given page has no other image present.
-fallBackOgImage = "images/thumbnail.png"
+fallBackOgImage = "logos/logonochar.png"
 
 # Logo image
 logo = "logos/logo.png"
@@ -84,7 +84,7 @@ enforceLightMode = false
 # enforceDarkMode = false
 
 # customize footer icon. see issue https://github.com/chipzoller/hugo-clarity/issues/77
-# footerLogo = "icons/copy.svg"
+footerLogo = "icons/apple-touch-icon.png"
 
 # Customize Sidebar Disclaimer Text
 # sidebardisclaimer = true
