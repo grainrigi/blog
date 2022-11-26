@@ -22,3 +22,9 @@ series = "series"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+
+[related]
+  includeNewer = true
+[[related.indices]]
+  name = 'tags'
+  weight = 100

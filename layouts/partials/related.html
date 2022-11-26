@@ -1,0 +1,9 @@
+{{$related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+	<h2 class="post_related">関連記事</h2>
+	<ul>
+	  {{ range . }}
+	      <li><a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a></li>
+	  {{ end }}
+	</ul>
+{{ end }}
