@@ -7,7 +7,7 @@ categories:
   - 備忘録
 tags:
   - FF14
-  - ArchLinux
+  - Linux
 # comment: false # Disable comment if false.
 ---
 
