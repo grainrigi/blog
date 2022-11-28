@@ -51,7 +51,7 @@
       <ul>
         {{ range . }}
         <li>
-          <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+          <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }} ({{ .Date.Format (default "2006/01/02" $.Site.Params.dateFormat) -}})</a>
         </li>
         {{ end }}
       </ul>
@@ -66,7 +66,7 @@
     <ul>
       {{- range . }}
       <li>
-        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }} ({{ .Date.Format (default "2006/01/02" $.Site.Params.dateFormat) -}})</a>
       </li>
       {{- end }}
     </ul>
@@ -76,7 +76,7 @@
       {{- $recent := default 8 $s.numberOfRecentPosts }}
       {{- range first $recent $posts | symdiff $featuredPosts }}
       <li>
-        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }}</a>
+        <a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title | markdownify }} ({{ .Date.Format (default "2006/01/02" $.Site.Params.dateFormat) -}})</a>
       </li>
       {{- end }}
     </ul>
