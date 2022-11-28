@@ -94,7 +94,7 @@ x86の場合は手動でビルドした上でホスト上に直接インスト�
 まず、サーバーのパッケージをすべて最新にしておく(念の為)。
 
 ```sh
-$ sudo apt -y udpate
+$ sudo apt -y update
 $ sudo apt -y upgrade
 $ reboot
 ```
