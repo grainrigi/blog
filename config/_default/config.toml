@@ -4,7 +4,7 @@ baseurl = "https://blog.grainrigi.net/"  # Include trailing slash
 # title = "Clarity"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
 copyright = "Copyright © 2022, grainrigi; all rights reserved."
 # canonifyurls = true
-paginate = 10
+paginate = 5
 theme = ["github.com/chipzoller/hugo-clarity"]
 disqusShortname = ""
 
