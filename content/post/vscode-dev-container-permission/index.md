@@ -121,7 +121,8 @@ RUN apt -y update \
 RUN [ -n "$UID" ] && (groupadd --gid $GID $USERNAME \
  && useradd --uid $UID --gid $GID -m $USERNAME \
  && echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME \
- && chmod 0440 /etc/sudoers.d/$USERNAME)
+ && chmod 0440 /etc/sudoers.d/$USERNAME \
+ && chown -R $UID:$GID /go)
 
 USER $USERNAME
 
